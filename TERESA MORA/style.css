@@ -1,0 +1,33 @@
+/* ==========================================
+   CUSTOM STYLES (Tambahan kustomisasi CSS)
+   ========================================== */
+
+/* Efek kedip kursor pada teks dinamis (typing effect) */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.cursor {
+    animation: blink 1s infinite;
+    font-weight: 300;
+    color: #db3c6c;
+}
+
+/* Kustomisasi Scrollbar agar terlihat rapi */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0febc6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3081f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #28ff39;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya - Web Developer & Designer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-['Poppins']">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                Portofolio<span class="text-white">.</span>
+            </a>
+            
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-slate-300 hover:text-blue-400 transition">Beranda</a>
+                <a href="#about" class="nav-link text-slate-300 hover:text-blue-400 transition">Tentang</a>
+                <a href="#projects" class="nav-link text-slate-300 hover:text-blue-400 transition">Proyek</a>
+                <a href="#contact" class="nav-link text-slate-300 hover:text-blue-400 transition">Kontak</a>
+            </nav>
+
+            <!-- Tombol Hamburger Mobile -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Menu Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-4">
+            <a href="#home" class="block text-slate-300 hover:text-blue-400 transition mobile-link">Beranda</a>
+            <a href="#about" class="block text-slate-300 hover:text-blue-400 transition mobile-link">Tentang</a>
+            <a href="#projects" class="block text-slate-300 hover:text-blue-400 transition mobile-link">Proyek</a>
+            <a href="#contact" class="block text-slate-300 hover:text-blue-400 transition mobile-link">Kontak</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <!-- Efek Background Glow -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-500/10 text-blue-400 text-sm font-medium border border-blue-500/20">
+                    Halo, Selamat Datang 👋
+                </span>
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight">
+                    Saya <span class="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Hatsune Miku</span>
+                </h1>
+                <p class="text-slate-400 text-lg leading-relaxed max-w-xl">
+                    Seorang <span id="typed-text" class="text-white font-medium"></span><span class="cursor">|</span> yang berfokus pada pembuatan pengalaman web yang interaktif, bersih, dan fungsional.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-blue-600/30">
+                        Lihat Proyek
+                    </a>
+                    <a href="#contact" class="border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium px-6 py-3 rounded-xl transition">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Foto / Ilustrasi Hero -->
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl group">
+                    <!-- Ganti link gambar di bawah dengan foto Anda -->
+                    <img src="https://i.pinimg.com/236x/8a/14/35/8a143598790e89bd1216827ad27d6b56.jpg" alt="Foto Profil" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 px-6 bg-slate-950/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Tentang <span class="text-blue-400">Saya</span></h2>
+                <p class="text-slate-400">Kenali saya lebih dekat, keahlian, dan latar belakang saya.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-300 leading-relaxed">
+                    <h3 class="text-xl font-semibold text-white">Siapa saya?</h3>
+                    <p>
+                        Saya adalah seorang pengembang web yang antusias dengan ketertarikan tinggi pada antarmuka pengguna (UI) dan pengembangan front-end maupun back-end sederhana. Saya senang mengubah ide kreatif menjadi produk digital yang nyata dan mudah diakses.
+                    </p>
+                    <p>
+                        Selain coding, saya selalu belajar tren teknologi terbaru untuk memastikan solusi yang saya buat tetap efisien, cepat, dan modern.
+                    </p>
+                    <div class="pt-4 flex gap-4">
+                        <a href="#" class="text-slate-400 hover:text-blue-400 text-xl transition"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-400 text-xl transition"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-400 text-xl transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bagian Keahlian / Skills -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-white">Keahlian & Teknologi</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl flex items-center space-x-3">
+                            <i class="fa-brands fa-html5 text-orange-500 text-2xl"></i>
+                            <span class="font-medium text-slate-200">HTML5 / CSS3</span>
+                        </div>
+                        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl flex items-center space-x-3">
+                            <i class="fa-brands fa-js text-yellow-400 text-2xl"></i>
+                            <span class="font-medium text-slate-200">JavaScript</span>
+                        </div>
+                        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl flex items-center space-x-3">
+                            <i class="fa-brands fa-react text-cyan-400 text-2xl"></i>
+                            <span class="font-medium text-slate-200">React.js</span>
+                        </div>
+                        <div class="p-4 bg-slate-900 border border-slate-800 rounded-xl flex items-center space-x-3">
+                            <i class="fa-brands fa-node text-green-500 text-2xl"></i>
+                            <span class="font-medium text-slate-200">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Proyek <span class="text-blue-400">Pilihan</span></h2>
+                <p class="text-slate-400">Beberapa karya dan proyek terbaik yang pernah saya buat.</p>
+            </div>
+
+            <!-- Grid Proyek -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Proyek 1 -->
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://cdn.pfps.gg/pfps/6257-miku-cute.png" alt="Proyek 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white">Dashboard Analitik</h3>
+                        <p class="text-slate-400 text-sm">Dashboard manajemen data bisnis modern dengan grafik interaktif dan fitur export.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">React</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">Tailwind</span>
+                        </div>
+                        <div class="pt-4 flex items-center justify-between">
+                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">Live Demo <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                            <a href="#" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 2 -->
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/f5/d9/46/f5d946fc752b55e55dfca174f454bc80.jpg" alt="Proyek 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white">Aplikasi E-Commerce</h3>
+                        <p class="text-slate-400 text-sm">Platform toko online lengkap dengan sistem keranjang belanja dan integrasi pembayaran.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">JavaScript</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">API</span>
+                        </div>
+                        <div class="pt-4 flex items-center justify-between">
+                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">Live Demo <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                            <a href="#" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyek 3 -->
+                <div class="bg-slate-800/50 border border-slate-700/60 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://i.pinimg.com/736x/e3/e2/da/e3e2dacd471641ca7f58540afe2fd795.jpg" alt="Proyek 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <h3 class="text-xl font-bold text-white">Website Portofolio V1</h3>
+                        <p class="text-slate-400 text-sm">Website profil pribadi minimalis dengan mode gelap bawaan dan animasi mulus.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">HTML/CSS</span>
+                            <span class="text-xs bg-slate-700 text-slate-300 px-2.5 py-1 rounded-md">Tailwind</span>
+                        </div>
+                        <div class="pt-4 flex items-center justify-between">
+                            <a href="#" class="text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center gap-1">Live Demo <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                            <a href="#" class="text-slate-400 hover:text-white text-lg"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 bg-slate-950/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3">Hubungi <span class="text-blue-400">Saya</span></h2>
+                <p class="text-slate-400">Punya pertanyaan, proyek baru, atau ingin sekadar menyapa? Silakan kirim pesan!</p>
+            </div>
+
+            <form id="contact-form" class="space-y-6 bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-300">Nama Lengkap</label>
+                        <input type="text" id="name" required placeholder="John Doe" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-slate-300">Email Anda</label>
+                        <input type="email" id="email" required placeholder="john@example.com" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 transition">
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-sm font-medium text-slate-300">Pesan</label>
+                    <textarea id="message" rows="5" required placeholder="Tuliskan pesan Anda di sini..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-blue-500 transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-xl transition shadow-lg shadow-blue-600/30">
+                    Kirim Pesan
+                </button>
+                <p id="form-status" class="text-center text-sm hidden"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Nama Anda. Dibuat dengan semangat dan kode yang bersih.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
